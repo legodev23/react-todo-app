@@ -1,7 +1,8 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import Task from "./components/Task";
 
 import "./App.css";
+import Archived from "./components/Archived";
 
 type FormElement = React.FormEvent<HTMLFormElement>;
 interface ITask {
@@ -14,10 +15,6 @@ function App(): JSX.Element {
   const [tasks, setTasks] = useState<ITask[]>([]);
 
   const taskInput = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    console.log(tasks);
-  }, [tasks]);
 
   function handleSubmit(e: FormElement) {
     e.preventDefault();
@@ -35,7 +32,7 @@ function App(): JSX.Element {
 
   function handleCheck(i: number) {
     let newTasks: ITask[] = [...tasks];
-    newTasks[i].done = true;
+    newTasks[i].done = !newTasks[i].done;
     setTasks(newTasks)
   }
 
@@ -62,6 +59,7 @@ function App(): JSX.Element {
           </Fragment>
         ))}
       </div>
+      <Archived tasks={tasks} toReturn={handleCheck} />
     </>
   );
 }

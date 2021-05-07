@@ -1,0 +1,77 @@
+.btnArchived {
+  position: absolute;
+  right: 0.416em;
+  bottom: 0.416em;
+  border: 2px solid var(--main-color);
+  border-radius: 100% 100% 100% 0;
+  width: 2.08em;
+  height: 2.08em;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.btnArchived:hover {
+  background-color: var(--main-color);
+}
+
+.archivedContainer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 25em;
+  padding: 0 1em;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: -0.8em 0 1.4em rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.archivedContainer > button {
+  font-size: 1em;
+  margin: 1em;
+  width: 2em;
+  height: 2em;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.archivedContainer > button:hover {
+  background-color: var(--hover-color);
+}
+
+.archived {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: red;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+}
+
+.archived button {
+  width: 2em;
+  height: 2em;
+  padding-top: 0.29em;
+  background-color: var(--success-color);
+  border: none;
+  border-radius: 0.2em;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.archived button:hover {
+  background-color: var(--success-hover-color);
+}

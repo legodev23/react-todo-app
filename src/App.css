@@ -11,19 +11,19 @@ input {
 }
 input[type="text"] {
   border-radius: 3px 0 0 3px;
-  border-color: #3999ff;
+  border-color: var(--main-color);
   border-right: 0;
   border-style: solid;
 }
 input[type="submit"] {
   font-weight: bold;
-  background-color: #3999ff;
+  background-color: var(--main-color);
   border: none;
   border-radius: 0 3px 3px 0;
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background-color: #0072ed;
+  background-color: var(--hover-color);
 }
 
 .containerTasks {
